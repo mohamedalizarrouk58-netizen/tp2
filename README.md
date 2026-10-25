@@ -1,18 +1,7 @@
-## Getting Started
+# TP2 : Application Client/Serveur avec Sockets Java
+Dans ce TP, nous avons créé un client Java qui se connecte à un serveur via le réseau. L’utilisateur peut saisir une opération mathématique, comme `55 * 25`, puis le client l’envoie au serveur et affiche le résultat reçu. Le programme vérifie aussi si l’opération est correcte et permet de quitter avec la commande `exit`.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Execution
+![alt text](server.png)
+![alt text](client.png)
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).

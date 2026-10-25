@@ -4,12 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.ConnectException;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class client {
     public static void main(String[] args) {
-        String host = "localhost"; 
+        String host = "localhost";
         int port = 8080;
 
         try (Socket socket = new Socket(host, port);
@@ -39,8 +40,10 @@ public class client {
                 System.out.println("réponse correct " + response);
             }
 
+        } catch (ConnectException e) {
+            System.err.println("Connexion refusée : démarrez d'abord le serveur sur le port " + port + ".");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Erreur de communication avec le serveur : " + e.getMessage());
         }
     }
     
